@@ -4,29 +4,34 @@ Nesse exercício, você está livre para escolher os nomes para suas variáveis 
 
 ```js
 // Crie uma função que receba dois argumentos e retorne a soma dos mesmos.
-?
+function soma (x, y){
+return x + y;
+}
 
 // Declare uma variável que receba a invocação da função criada acima, passando dois números quaisquer por argumento, e somando `5` ao resultado retornado da função.
-?
+var s = soma(20, 10) + 5;
 
 // Qual o valor atualizado dessa variável?
-?
+s
+35
 
 // Declare uma nova variável, sem valor.
-?
+var h;
 
 /*
 Crie uma função que adicione um valor à variável criada acima, e retorne a string:
     O valor da variável agora é VALOR.
 Onde VALOR é o novo valor da variável.
 */
-?
+function valor() {
+return h = 'O valor da variavel agora eh VALOR';
+}
 
 // Invoque a função criada acima.
-?
+valor ();
 
 // Qual o retorno da função? (Use comentários de bloco).
-?
+/* O valor da variavel h, que seria "O valor da variavel agora eh VALOR" */
 
 /*
 Crie uma função com as seguintes características:
@@ -35,19 +40,25 @@ Crie uma função com as seguintes características:
     Preencha todos os valores corretamente!
 3. O retorno da função deve ser a multiplicação dos 3 argumentos, somando `2` ao resultado da multiplicação.
 */
-?
+function mult3(x, y, z){
+    if (x && y && z){
+      return x * y * z;
+    }else { 
+     return 'Preencha todos os valors corretamente!'
+ }
+}
 
 // Invoque a função criada acima, passando só dois números como argumento.
-?
+mult3(3,4);
 
 // Qual o resultado da invocação acima? (Use comentários para mostrar o valor retornado).
-?
+  //Ativara o **else** da function e retornara 'Preencha todos os valores corretamente!'
 
 // Agora invoque novamente a função criada acima, mas passando todos os três argumentos necessários.
-?
+mult3(2, 4, 8);
 
 // Qual o resultado da invocação acima? (Use comentários para mostrar o valor retornado).
-?
+64
 
 /*
 Crie uma função com as seguintes características:
@@ -58,8 +69,34 @@ Crie uma função com as seguintes características:
 5. Se nenhum argumento for passado, retorne o valor booleano `false`.
 6. E ainda, se nenhuma das condições acima forem atendidas, retorne `null`.
 */
-?
+function pass(x, y, z){
+    if (y == null && z == null){
+    return x; 
+    }
+    else if (x != null && y != null && z == null){
+    return x + y;
+    }
+    else if (x != null && y != null && z != null){
+    return (x + y) / z; 
+    }
+    else if(x == null && y == null && z == null){
+    return false;
+    }
+    else{
+    return null;
+    } 
+    
+    }
 
 // Invoque a função acima utilizando todas as possibilidades (com nenhum argumento, com um, com dois e com três.) Coloque um comentário de linha ao lado da função com o resultado de cada invocação.
 ?
-```
+pass(5);
+//5
+pass(10, 5);
+//15
+pass(10, 5, 3);
+//5
+pass();
+//false
+pass(function);
+//null

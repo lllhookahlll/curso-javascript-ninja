@@ -2,7 +2,10 @@
 
 ```js
 // Declarar uma variável qualquer, que receba um objeto vazio.
+var x;
 var qualquer = {};
+
+x = qualquer;
 
 /*
 Declarar uma variável `pessoa`, que receba suas informações pessoais.

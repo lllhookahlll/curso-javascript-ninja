@@ -184,28 +184,20 @@ correta, de acordo com os dados inseridos no objeto.
 // Agora, apresente-se ;)
 pessoa.apresentacao = function(){
 
-pessoa.sexo = 'Feminino';
-pessoa.nome = 'Maria' ;
-pessoa.sobrenome = 'josefina';
+sexo = 'o';
+idadeAnos = 'anos' ;
+caminhouMetros= 'metros';
     if (pessoa.sexo === 'Feminino'){
-    return 'Olá, eu sou a' + ' ' + pessoa.nome + ' ' + pessoa.sobrenome + ',' + ' ';
-    }eslse if (pessoa.sexo === 'Masculino'){
-    return 'Olá, eu sou o' + ' ' + pessoa.nomeCompleto + ',' + ' ';
-    }
-pessoa.idade = 1;    
+    sexo = 'a';
+    };
+   
     if ( pessoa.idade === 1){
-    return 'tenho' + pessoa.idade + 'ano' + ',' + ' ';
-    }else if (pessoa.idade > 1){
-    return 'tenho' + pessoa.idade + 'anos' + ',' + ' ';
-    }
-    return pessoa.altura + ',' + ' ' + 'meu peso é' + ' ' + pessoa.peso + ' ' + 'e, só hoje, eu já caminhei' + ' '; 
-    
-pessoa.caminhouQuantosMetros = 30;    
+    idadeAnos = 'ano';
+    };
+  
     if (pessoa.caminhouQuantosMetros === 1){
-    return pessoa.caminhouQuantosMetros + 'metro';
-    }else if (pessoa.caminhouQuantosMetros > 1){
-    return pessoa.caminhouQuantosMetros + 'metros';
-    }
-
-}
+    caminhouMetros = 'metro';
+    };
+return 'Olá, eu sou ' + sexo + ' ' + pessoa.nome + ' ' + pessoa.sobrenome + ', tenho ' + pessoa.idade + ' ' + idadeAnos + ', ' + pessoa.altura + ', meu peso é ' + pessoa.peso + ' e, só hoje, eu já caminhei ' + pessoa.caminhouQuantosMetros + ' ' + caminhouMetros + '!';
+};
 ```

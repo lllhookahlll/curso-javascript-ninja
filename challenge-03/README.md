@@ -47,8 +47,8 @@ valor dessa propriedade a quantidade passada por parâmetro;
 - Ele deverá modificar o valor da propriedade `andando` para o valor
 booleano que representa "verdadeiro";
 */
-pessoa.andar = function(x){
-    pessoa.caminhouQuantosMetros = x;
+pessoa.andar = function(metros){
+    pessoa.caminhouQuantosMetros += metros;
     pessoa.andando = true;
 }
 
@@ -160,7 +160,7 @@ pessoa.andando; //false
 Quantos metros a pessoa andou? (Use uma instrução para responder e comentários
 inline ao lado da instrução para mostrar a resposta retornada)
 */
-pessoa.caminhouQuantosMetros; //3
+pessoa.caminhouQuantosMetros; //6
 
 /*
 Agora vamos deixar a brincadeira um pouco mais divertida! :D

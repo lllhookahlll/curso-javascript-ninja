@@ -59,7 +59,7 @@ Adicione um método ao objeto `pessoa` chamado `parar`, que irá modificar o val
 da propriedade `andando` para o valor booleano que representa "falso".
 */
 pessoa.parar = function (){
-    andando = false;
+    pessoa.andando = false;
 }
 
 /*

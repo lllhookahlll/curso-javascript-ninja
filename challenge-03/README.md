@@ -3,7 +3,7 @@
 ```js
 // Declarar uma variável qualquer, que receba um objeto vazio.
 var x;
-var qualquer = {};
+var qualquer = {}
 
 x = qualquer;
 

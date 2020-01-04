@@ -62,8 +62,17 @@ function book(nomeLivro){
     if (nomeLivro === undefined){
       return allLivros;
     };
+    if (nomeLivro === 'livro1'){
+      return allLivros.livro1;
+    };
+    if (nomeLivro === 'livro2'){
+      return allLivros.livro2;
+    };
+    if (nomeLivro ==='livro3'){
+      return allLivros.livro3;
+    };  
   
-  return allLivros{nomeLivro:};
+  
 }  
 
 /*

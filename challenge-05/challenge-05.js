@@ -30,13 +30,13 @@ function myFunction(arr ,nmr){
 /*
 Declare uma variável que recebe um array com 5 valores, de tipos diferentes.
 */
-// ?
+var varDiferente = ['Mario', function(){}, 5, [1,2], true];
 
 /*
 Invoque a função criada acima, fazendo-a retornar todos os valores do último
 array criado.
 */
-// ?
+varDiferente;
 
 /*
 Crie uma função chamada `book`, que recebe um parâmetro, que será o nome do
@@ -52,7 +52,19 @@ propriedades:
 - Se o parâmetro não for passado, a função deve retornar o objeto com todos
 os livros.
 */
-// ?
+function book(nomeLivro){
+  var allLivros = {
+    livro1:{quantidadedePaginas: 589, autor: 'Jonatas Gonzaga', editora: 'TiMelo'}, 
+    livro2:{quantidadedePaginas: 258, autor: 'Mario Cesar', editora: 'Moltem'}, 
+    livro3:{quantidadedePaginas: 1459, autor: 'Luiz Carlos', editora: 'Balks'}
+  };
+    
+    if (nomeLivro === undefined){
+      return allLivros;
+    };
+  
+  return allLivros{nomeLivro:};
+}  
 
 /*
 Usando a função criada acima, imprima o objeto com todos os livros.

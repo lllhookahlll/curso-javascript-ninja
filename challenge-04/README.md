@@ -112,17 +112,17 @@ mostrar quantos assentos ainda podem ser ocupados, com a frase:
 citado acima, no lugar de "pessoas".
 */
 carro.adicionarPessoas = function (numeroPessoas){
-    carro.quantidadePessoas += numeroPessoas
-    var restoPessoas = carro.assentos - carro.quantidadePessoas;
-    var pessoasPluSing = carro.quantidadePessoas === 1 ? 'pessoa': 'pessoas';
+    var totalPessoas = carro.quantidadePessoas + numeroPessoas;
     
-    if (carro.quantidadePessoas === carro.assentos) {
+    if (carro.quantidadePessoas === carro.assentos && totalPessoas >= carro.assentos) {
       return 'O carro já esta lotado';  
     }
-    if (carro.quantidadePessoas < carro.assentos && carro.quantidadePessoas > carro.assento){
+    if (totalPessoas > carro.assentos){
+      var pessoasPluSing = carro.quantidadePessoas === 1 ? 'pessoa': 'pessoas';
+      var restoPessoas = carro.assentos - carro.quantidadePessoas;
       return 'Só cabem mais ' + restoPessoas + ' ' + pessoasPluSing + '!';
     }    
-    
+    carro.quantidadePessoas += numeroPessoas;
     return 'Já temos ' + carro.quantidadePessoas + ' pessoas no carro!';
     
 }
@@ -135,38 +135,38 @@ retornar algum valor.
 
 Qual a cor atual do carro?
 */
-?
+carro.obterCor(); //'Azul'
 
 // Mude a cor do carro para vermelho.
-?
+carro.mudarCor('Cinza'); //'Cinza'
 
 // E agora, qual a cor do carro?
-?
+'Cinza'
 
 // Mude a cor do carro para verde musgo.
-?
+carro.mudarCor('Verde-Musgo');
 
 // E agora, qual a cor do carro?
-?
+'Verde-Musgo'
 
 // Qual a marca e modelo do carro?
-?
+carro.obterMarcaModelo(); //'Esse carro é um Fiat Uno'
 
 // Adicione 2 pessoas no carro.
-?
+carro.adicionarPessoas(2); //'Já temos 2 pessoas no carro!'
 
 // Adicione mais 4 pessoas no carro.
-?
+carro.adicionarpessoas(4); //'Só cabem mais 3 pessoas no carro!'
 
 // Faça o carro encher.
-?
+carro.adicionarPessoas(3); //'Já temos 5 pessoas no carro!'
 
 // Tire 4 pessoas do carro.
-?
+carro.adicionarPessoas(-4); //'Já temos 1 pessoas no carro!'
 
 // Adicione 10 pessoas no carro.
-?
+carro.adicionarPessoas(10); //'Só cabem mais 4 pessoas!'
 
 // Quantas pessoas temos no carro?
-?
+carro.quantidadePessoas; //1
 ```
